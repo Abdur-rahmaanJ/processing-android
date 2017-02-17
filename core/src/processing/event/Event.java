@@ -31,10 +31,11 @@ public class Event {
 
   // These correspond to the java.awt.Event modifiers (not to be confused with
   // the newer getModifiersEx), though they're not guaranteed to in the future.
-  static public final int SHIFT = 1 << 0;
-  static public final int CTRL  = 1 << 1;
-  static public final int META  = 1 << 2;
-  static public final int ALT   = 1 << 3;
+  static public final int SHIFT  = 1 << 0;
+  static public final int CTRL   = 1 << 1;
+  static public final int META   = 1 << 2;
+  static public final int ALT    = 1 << 3;
+  static public final int INSERT = 1 << 4;
   protected int modifiers;
 
   // Types of events. As with all constants in Processing, brevity's preferred.
@@ -121,5 +122,9 @@ public class Event {
 
   public boolean isAltDown() {
     return (modifiers & ALT) != 0;
+  }
+  
+  public boolean isInsertDown() {
+    return (modifiers & INSERT) != 0;
   }
 }
