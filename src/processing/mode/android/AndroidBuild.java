@@ -184,6 +184,7 @@ class AndroidBuild extends JavaBuild {
     if (pkg.startsWith("javax.")) return true;
     if (pkg.startsWith("org.apache.http.")) return true;
     if (pkg.startsWith("org.json.")) return true;
+    if (pkg.startsWith("org.csv.")) return true;
     if (pkg.startsWith("org.w3c.dom.")) return true;
     if (pkg.startsWith("org.xml.sax.")) return true;
 
@@ -984,6 +985,7 @@ class AndroidBuild extends JavaBuild {
         System.err.println("Use the Android SDK Manager (under the Android");
         System.err.println("menu) to install the SDK platform and ");
         System.err.println("Google APIs for Android " + target_sdk);
+        System.err.println("Thank you");
         skex = new SketchException("Please install the SDK platform and " +
                                    "Google APIs for Android " + target_sdk);
       }
